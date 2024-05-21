@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Ices.Crossport
+namespace Anonymous.Crossport
 {
     public static class CoroutineExtensions
     {

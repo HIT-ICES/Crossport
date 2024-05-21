@@ -1,4 +1,4 @@
-using Ices.Crossport.Core.DualHandling.InputSystem;
+using Anonymous.Crossport.Core.DualHandling.InputSystem;
 using System;
 using System.Linq;
 using Unity.RenderStreaming;
@@ -8,10 +8,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using UnityEngine.InputSystem.Utilities;
-using InputRemoting = Ices.Crossport.Core.DualHandling.InputSystem.InputRemoting;
+using InputRemoting = Anonymous.Crossport.Core.DualHandling.InputSystem.InputRemoting;
 using Inputs = UnityEngine.InputSystem.InputSystem;
 
-namespace Ices.Crossport.Core.DualHandling
+namespace Anonymous.Crossport.Core.DualHandling
 {
     /// <summary>
     /// Represents a separate player in the game complete with a set of actions exclusive

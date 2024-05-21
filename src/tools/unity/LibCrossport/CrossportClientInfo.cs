@@ -1,9 +1,9 @@
 ﻿using System;
-using Ices.Crossport.Settings;
+using Anonymous.Crossport.Settings;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Ices.Crossport
+namespace Anonymous.Crossport
 {
     [Serializable]
     public class CrossportClientInfo

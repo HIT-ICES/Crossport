@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Authentication;
 using System.Text;
 using System.Threading;
-using Ices.Crossport.Settings;
+using Anonymous.Crossport.Settings;
 using Unity.RenderStreaming;
 using Unity.RenderStreaming.Signaling;
 using Unity.WebRTC;
@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using WebSocketSharp;
 
-namespace Ices.Crossport
+namespace Anonymous.Crossport
 {
     [Serializable]
     public class RoutedMessage<T>

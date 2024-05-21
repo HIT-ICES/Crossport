@@ -1,10 +1,10 @@
 ﻿using System.Collections.Concurrent;
-using Ices.Crossport.Core.Connecting;
-using Ices.Crossport.Core.Entities;
-using Ices.MetaCdn.Health;
-using Ices.MetaCdn.Remoting;
+using Anonymous.Crossport.Core.Connecting;
+using Anonymous.Crossport.Core.Entities;
+using Anonymous.MetaCdn.Health;
+using Anonymous.MetaCdn.Remoting;
 
-namespace Ices.Crossport.Core;
+namespace Anonymous.Crossport.Core;
 
 public enum ConnectionEventType
 {

@@ -1,4 +1,4 @@
-﻿namespace Ices.Crossport.Core.Entities;
+﻿namespace Anonymous.Crossport.Core.Entities;
 
 public record Offer(string Sdp, long Datetime, bool Polite)
 {

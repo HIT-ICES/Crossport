@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Ices.Crossport.Settings
+namespace Anonymous.Crossport.Settings
 {
     [Serializable]
     public class CrossportVideoSetting

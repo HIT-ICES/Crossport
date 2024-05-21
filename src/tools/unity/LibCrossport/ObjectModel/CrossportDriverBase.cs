@@ -2,11 +2,11 @@
 using System.Linq;
 using Assets.Scripts.LibCrossport.Settings;
 #nullable enable
-using Ices.Crossport.Settings;
+using Anonymous.Crossport.Settings;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Ices.Crossport.ObjectModel
+namespace Anonymous.Crossport.ObjectModel
 {
     public class CrossportDriverBase : MonoBehaviour
     {

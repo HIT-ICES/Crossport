@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Ices.Crossport.Settings
+namespace Anonymous.Crossport.Settings
 {
     [Serializable]
     public class CrossportClientSetting : CrossportClientInfo

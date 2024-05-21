@@ -1,7 +1,7 @@
-using Ices.Crossport.Core;
-using Ices.Crossport.Core.Connecting;
-using Ices.Crossport.Core.Diagnostics;
-using Ices.Crossport.Core.Signalling;
+using Anonymous.Crossport.Core;
+using Anonymous.Crossport.Core.Connecting;
+using Anonymous.Crossport.Core.Diagnostics;
+using Anonymous.Crossport.Core.Signalling;
 using Serilog;
 using Steeltoe.Extensions.Configuration.Placeholder;
 

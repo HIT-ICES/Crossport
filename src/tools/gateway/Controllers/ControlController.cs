@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace Ices.Crossport.Controllers;
+namespace Anonymous.Crossport.Controllers;
 
 [Route("/ctrl")] public class ControlController { }

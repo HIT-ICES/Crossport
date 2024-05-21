@@ -1,6 +1,6 @@
-﻿using Ices.Crossport.Utils;
+﻿using Anonymous.Crossport.Utils;
 
-namespace Ices.Crossport.Core.Signalling;
+namespace Anonymous.Crossport.Core.Signalling;
 
 public class DiagnosticSignallingHandler : ISignalingHandler
 {

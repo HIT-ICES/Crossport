@@ -11,7 +11,7 @@ using PoseControl = UnityEngine.InputSystem.XR.PoseControl;
 using PoseControl = UnityEngine.InputSystem.XR.PoseControl;
 #endif
 
-namespace Ices.Crossport.Core.LinuxOpenXR
+namespace Anonymous.Crossport.Core.LinuxOpenXR
 {
     /// <summary>
     ///     An Input System device based off the

@@ -1,14 +1,14 @@
 #nullable enable
 using Assets.Scripts.LibCrossport.Settings;
 using BodhiDonselaar;
-using Ices.Crossport;
-using Ices.Crossport.ObjectModel;
+using Anonymous.Crossport;
+using Anonymous.Crossport.ObjectModel;
 using System;
 using System.Collections.Generic;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Ices.Crossport.ObjectModel
+namespace Anonymous.Crossport.ObjectModel
 {
     public class RemoteConfiguredSenderCrossportDriver : CrossportDriverBase
     {

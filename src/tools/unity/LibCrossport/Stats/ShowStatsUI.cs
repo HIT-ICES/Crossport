@@ -8,7 +8,7 @@ using Unity.WebRTC;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Ices.Crossport.Stats
+namespace Anonymous.Crossport.Stats
 {
     internal class ShowStatsUI : MonoBehaviour
     {

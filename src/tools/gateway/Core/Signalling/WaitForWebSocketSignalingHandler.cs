@@ -1,6 +1,6 @@
 ﻿using System.Net.WebSockets;
 
-namespace Ices.Crossport.Core.Signalling;
+namespace Anonymous.Crossport.Core.Signalling;
 
 public class WaitForWebSocketSignalingHandler : WebSocketSignalingHandler
 {

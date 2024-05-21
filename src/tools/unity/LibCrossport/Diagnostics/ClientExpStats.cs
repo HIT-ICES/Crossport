@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Ices.Crossport.Settings;
+using Anonymous.Crossport.Settings;
 using Newtonsoft.Json;
 
-namespace Ices.Crossport.Diagnostics
+namespace Anonymous.Crossport.Diagnostics
 {
     [Serializable]
     public class Stats

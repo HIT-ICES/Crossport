@@ -6,12 +6,12 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<Version>0.4.1</Version>
-		<RootNamespace>Ices.Crossport</RootNamespace>
+		<RootNamespace>Anonymous.Crossport</RootNamespace>
 		<EnableSdkContainerSupport>true</EnableSdkContainerSupport>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ices.MetaCdn.Common" Version="0.2.2.3" />
+		<PackageReference Include="Anonymous.MetaCdn.Common" Version="0.2.2.3" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
 		<PackageReference Include="Steeltoe.Extensions.Configuration.PlaceholderCore" Version="3.2.3" />
 		<PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />

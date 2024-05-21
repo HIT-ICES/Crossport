@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace Ices.Crossport.Utils;
+namespace Anonymous.Crossport.Utils;
 
 public static class JsonHelper
 {

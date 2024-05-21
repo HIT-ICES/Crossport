@@ -1,7 +1,7 @@
 ﻿#nullable enable
 using System;
 
-namespace Ices.Crossport.Settings
+namespace Anonymous.Crossport.Settings
 {
     [Serializable]
     public class AppConfig

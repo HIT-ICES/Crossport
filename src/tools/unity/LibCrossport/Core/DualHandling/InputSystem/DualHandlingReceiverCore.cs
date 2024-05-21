@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Utilities;
 
-namespace Ices.Crossport.Core.DualHandling.InputSystem
+namespace Anonymous.Crossport.Core.DualHandling.InputSystem
 {
     using InputSystem = UnityEngine.InputSystem.InputSystem;
 

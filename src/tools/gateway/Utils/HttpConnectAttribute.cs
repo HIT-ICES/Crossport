@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Routing;
 
-namespace Ices.Crossport.Utils;
+namespace Anonymous.Crossport.Utils;
 
 public sealed class HttpConnectAttribute : HttpMethodAttribute
 {

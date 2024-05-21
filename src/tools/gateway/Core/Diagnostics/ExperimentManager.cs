@@ -1,6 +1,6 @@
-﻿using Ices.Crossport.Utils;
+﻿using Anonymous.Crossport.Utils;
 
-namespace Ices.Crossport.Core.Diagnostics;
+namespace Anonymous.Crossport.Core.Diagnostics;
 
 public class ExperimentManager(AppManager appManager, ILogger<ExperimentManager> logger)
 {

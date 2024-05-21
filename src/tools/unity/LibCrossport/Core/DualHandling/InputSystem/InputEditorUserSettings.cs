@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace Ices.Crossport.Core.DualHandling.InputSystem
+namespace Anonymous.Crossport.Core.DualHandling.InputSystem
 {
 #if UNITY_EDITOR && !INPUTSYSTEM_1_1_OR_NEWER
     // todo(kazuki)::Avoid to use reflection

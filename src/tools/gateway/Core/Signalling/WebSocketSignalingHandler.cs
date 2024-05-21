@@ -1,7 +1,7 @@
 ﻿using System.Net.WebSockets;
 using System.Text.Json;
 
-namespace Ices.Crossport.Core.Signalling;
+namespace Anonymous.Crossport.Core.Signalling;
 
 public class WebSocketSignalingHandler : IDisposable, ISignalingHandler
 {

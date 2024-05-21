@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Ices.Crossport.Core.DualHandling.InputSystem
+namespace Anonymous.Crossport.Core.DualHandling.InputSystem
 {
     /// <summary>
     /// 

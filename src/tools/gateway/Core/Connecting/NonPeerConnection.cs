@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
-using Ices.Crossport.Core.Entities;
-using Ices.Crossport.Utils;
+using Anonymous.Crossport.Core.Entities;
+using Anonymous.Crossport.Utils;
 
-namespace Ices.Crossport.Core.Connecting;
+namespace Anonymous.Crossport.Core.Connecting;
 
 public enum ConnectionState
 {

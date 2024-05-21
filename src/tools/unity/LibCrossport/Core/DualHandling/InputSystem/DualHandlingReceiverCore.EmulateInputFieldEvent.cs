@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.LowLevel;
 
-namespace Ices.Crossport.Core.DualHandling.InputSystem
+namespace Anonymous.Crossport.Core.DualHandling.InputSystem
 {
     using Key = UnityEngine.InputSystem.Key;
 

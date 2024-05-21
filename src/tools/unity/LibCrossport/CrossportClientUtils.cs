@@ -3,14 +3,14 @@ using System;
 using System.Collections;
 using System.Threading;
 using Assets.Scripts.LibCrossport.Settings;
-using Ices.Crossport.Diagnostics;
-using Ices.Crossport.Settings;
+using Anonymous.Crossport.Diagnostics;
+using Anonymous.Crossport.Settings;
 using Newtonsoft.Json;
 using Unity.RenderStreaming;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Ices.Crossport
+namespace Anonymous.Crossport
 {
     public class CrossportClientUtils
     {

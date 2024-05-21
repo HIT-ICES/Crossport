@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 
-namespace Ices.Crossport.Core.DualHandling
+namespace Anonymous.Crossport.Core.DualHandling
 {
     class InputPositionCorrector
     {

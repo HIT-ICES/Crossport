@@ -1,8 +1,8 @@
-﻿using Ices.Crossport.Core.Diagnostics;
-using Ices.Crossport.Utils;
+﻿using Anonymous.Crossport.Core.Diagnostics;
+using Anonymous.Crossport.Utils;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Ices.Crossport.Controllers;
+namespace Anonymous.Crossport.Controllers;
 
 [Route("exp")]
 public class ExpController(ExperimentManager experimentManager) : Controller

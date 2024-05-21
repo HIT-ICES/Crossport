@@ -1,4 +1,4 @@
-﻿using Ices.Crossport.Settings;
+﻿using Anonymous.Crossport.Settings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Windows;
 using File = System.IO.File;
 
-namespace Ices.Crossport
+namespace Anonymous.Crossport
 {
     public class CrossportConfigurationManager
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Ices.Crossport.Diagnostics
+namespace Anonymous.Crossport.Diagnostics
 {
     public class EventLogger
     {

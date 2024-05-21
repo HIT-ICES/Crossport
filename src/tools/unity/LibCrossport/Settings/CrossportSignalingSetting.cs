@@ -4,7 +4,7 @@ using System.Threading;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Ices.Crossport.Settings
+namespace Anonymous.Crossport.Settings
 {
     [Serializable]
     public class CrossportSignalingSetting : CrossportClientSetting

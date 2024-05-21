@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Ices.Crossport;
-using Ices.Crossport.Diagnostics;
-using Ices.Crossport.Settings;
+using Anonymous.Crossport;
+using Anonymous.Crossport.Diagnostics;
+using Anonymous.Crossport.Settings;
 using Unity.RenderStreaming;
 using Unity.RenderStreaming.Signaling;
 using UnityEngine;
@@ -13,7 +13,7 @@ using UnityEngine.InputSystem.Controls;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-namespace Ices.Crossport.Receiver
+namespace Anonymous.Crossport.Receiver
 {
     public partial class ControlPanel : MonoBehaviour
     {

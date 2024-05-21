@@ -1,7 +1,7 @@
-﻿using Ices.Crossport.Core.Entities;
-using Ices.Crossport.Core.Signalling;
+﻿using Anonymous.Crossport.Core.Entities;
+using Anonymous.Crossport.Core.Signalling;
 
-namespace Ices.Crossport.Core.Connecting;
+namespace Anonymous.Crossport.Core.Connecting;
 
 public class ContentConsumer : Peer
 {

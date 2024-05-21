@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using Ices.Crossport.Diagnostics;
+using Anonymous.Crossport.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
-namespace Ices.Crossport.Diagnostics
+namespace Anonymous.Crossport.Diagnostics
 {
     public class MTPRecorder : MonoBehaviour
     {

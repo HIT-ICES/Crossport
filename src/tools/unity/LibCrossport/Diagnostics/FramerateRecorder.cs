@@ -5,7 +5,7 @@ using Unity.RenderStreaming;
 using Unity.WebRTC;
 using UnityEngine;
 
-namespace Ices.Crossport.Diagnostics
+namespace Anonymous.Crossport.Diagnostics
 {
     public class FrameRateRecorder : MonoBehaviour
     {

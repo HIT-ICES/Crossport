@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Ices.Crossport.Core.LinuxOpenXR;
+using Anonymous.Crossport.Core.LinuxOpenXR;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.XR.OpenXR.Input;
 
-namespace Ices.Crossport.Core.LinuxOpenXR
+namespace Anonymous.Crossport.Core.LinuxOpenXR
 {
     public abstract class LinuxOpenXRLayoutLoader : MonoBehaviour
     {

@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: ices.fers.crossport.testapps.fullvr
+  companyName: Anonymous.fers.crossport.testapps.fullvr
   productName: EmeraldSquareClassroom
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -160,8 +160,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.ices.fers.crossport.testapps.fullvr.EmeraldSquareClassroom
-    Standalone: com.ices.fers.crossport.testapps.EmeraldSquareClassroom
+    Android: com.Anonymous.fers.crossport.testapps.fullvr.EmeraldSquareClassroom
+    Standalone: com.Anonymous.fers.crossport.testapps.EmeraldSquareClassroom
     iPhone: com.araadshams.StudentCardboard
   buildNumber:
     Standalone: 0

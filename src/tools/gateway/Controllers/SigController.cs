@@ -1,9 +1,9 @@
-﻿using Ices.Crossport.Core;
-using Ices.Crossport.Core.Entities;
-using Ices.Crossport.Core.Signalling;
+﻿using Anonymous.Crossport.Core;
+using Anonymous.Crossport.Core.Entities;
+using Anonymous.Crossport.Core.Signalling;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Ices.Crossport.Controllers;
+namespace Anonymous.Crossport.Controllers;
 
 [Route("sig")]
 public class SigController(
