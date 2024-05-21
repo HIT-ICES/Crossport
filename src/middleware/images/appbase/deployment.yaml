@@ -1,0 +1,56 @@
+# variables: 
+#   - VGL_DISPLAY_NO: $VGL_DISPLAY_NO
+#   - SIG_SRV: $SIG_SRV
+#   - APP_NAME: $APP_NAME
+#   - CMP_NAME: $CMP_NAME
+#   - IMG_REPO: $IMG_REPO
+#   - SVC_NAME: $SVC_NAME
+#   - IMG_TAG: $IMG_TAG
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $APP_NAME-$CMP_NAME
+  labels:
+    app: $APP_NAME-$CMP_NAME
+spec:
+  replicas: $REPLICAS
+  selector:
+    matchLabels:
+      app: $APP_NAME-$CMP_NAME
+  template:
+    metadata:
+      name: $APP_NAME-$CMP_NAME
+      labels:
+        app: $APP_NAME-$CMP_NAME
+    spec:
+      containers:
+        - name: $APP_NAME-$CMP_NAME
+          image: $IMG_REPO/$IMG_NAME:$IMG_TAG
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: "6000Mi"
+              cpu: 8000m
+            requests:
+              memory: 200Mi
+              cpu: 10m
+          env:
+            - name: NVIDIA_DRIVER_CAPABILITIES
+              value: compute,utility,video,display
+            - name: SIG_SRV
+              value: $SIG_SRV
+            - name: SIG_PORT
+              value: '$SIG_PORT'
+            - name: APP_NAME
+              value: $APP_NAME
+            - name: CMP_NAME
+              value: $CMP_NAME
+            - name: VGL_DISPLAY
+              value: ':0'
+          volumeMounts:
+            - name: vgl
+              mountPath: /tmp/.X11-unix/X0
+      volumes:
+        - name: vgl
+          hostPath:
+            path: /tmp/.X11-unix/X$VGL_DISPLAY_NO

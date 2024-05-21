@@ -1,0 +1,8 @@
+{
+  "label": "Remote Rendering",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "To create a server-side rendering XR application."
+  }
+}

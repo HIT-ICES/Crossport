@@ -1,0 +1,12 @@
+[Unit]
+Description=gpu-ms
+After=network.target
+
+[Service]
+User=fers
+WorkingDirectory=/opt/gpu-ms/
+ExecStart=/usr/bin/python3 /opt/gpu-ms/GpuMetricsServer.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,82 @@
+{
+    "driver_version": "525.89.02",
+    "gpus": [
+        {
+            "enforced.power.limit": 170,
+            "fan.speed": 31,
+            "index": 0,
+            "memory.total": 12288,
+            "memory.used": 203,
+            "name": "NVIDIA GeForce RTX 3060",
+            "power.draw": 36,
+            "processes": [
+                {
+                    "command": "Xorg",
+                    "cpu_memory_usage": 80265216,
+                    "cpu_percent": 9.9,
+                    "full_command": [
+                        "/usr/lib/xorg/Xorg",
+                        "vt2",
+                        "-displayfd",
+                        "3",
+                        "-auth",
+                        "/run/user/1000/gdm/Xauthority",
+                        "-nolisten",
+                        "tcp",
+                        "-background",
+                        "none",
+                        "-noreset",
+                        "-keeptty",
+                        "-novtswitch",
+                        "-verbose",
+                        "3"
+                    ],
+                    "gpu_memory_usage": 110,
+                    "pid": 86504,
+                    "username": "fers"
+                },
+                {
+                    "command": "gnome-shell",
+                    "cpu_memory_usage": 404164608,
+                    "cpu_percent": 0.0,
+                    "full_command": [
+                        "/usr/bin/gnome-shell"
+                    ],
+                    "gpu_memory_usage": 65,
+                    "pid": 86932,
+                    "username": "fers"
+                },
+                {
+                    "command": "rustdesk",
+                    "cpu_memory_usage": 163590144,
+                    "cpu_percent": 0.0,
+                    "full_command": [
+                        "/usr/lib/rustdesk/rustdesk",
+                        "--cm"
+                    ],
+                    "gpu_memory_usage": 12,
+                    "pid": 87728,
+                    "username": "fers"
+                },
+                {
+                    "command": "glxspheres64",
+                    "cpu_memory_usage": 76791808,
+                    "cpu_percent": 139.3,
+                    "full_command": [
+                        "/opt/VirtualGL/bin/glxspheres64"
+                    ],
+                    "gpu_memory_usage": 2,
+                    "pid": 98747,
+                    "username": "root"
+                }
+            ],
+            "temperature.gpu": 43,
+            "utilization.dec": 0,
+            "utilization.enc": 0,
+            "utilization.gpu": 40,
+            "uuid": "GPU-af2ebd97-491d-238e-bc66-c63eb27b3375"
+        }
+    ],
+    "hostname": "meta-E0-a",
+    "query_time": "Wed, 14 Feb 2024 10:05:56 GMT"
+}

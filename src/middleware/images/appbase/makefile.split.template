@@ -1,0 +1,81 @@
+MK_MAIN = make -C main
+MK_BGND = make -C background
+
+# Targets
+
+.PHONY: default copy-conf install restart start stop logs uninstall deploy sh status
+
+default:
+	$(MK_BGND) && $(MK_MAIN)
+
+tag: default
+	$(MK_BGND) tag && $(MK_MAIN) tag
+
+publish: tag
+	$(MK_BGND) publish && $(MK_MAIN) publish
+
+install:
+	$(MK_BGND) install && $(MK_MAIN) install
+
+uninstall:
+	$(MK_BGND) uninstall && $(MK_MAIN) uninstall
+
+profile:
+	$(MK_BGND) profile && $(MK_MAIN) profile
+
+restart:
+	$(MK_BGND) restart && $(MK_MAIN) restart
+
+start:
+	$(MK_BGND) start && $(MK_MAIN) start
+
+stop:
+	$(MK_BGND) stop && $(MK_MAIN) stop
+
+bglogs:
+	$(MK_BGND) logs
+
+logs:
+	$(MK_MAIN) logs
+
+bgstatus:
+	$(MK_BGND) status
+
+status:
+	$(MK_MAIN) status
+
+bgdetail:
+	$(MK_BGND) detail
+
+detail:
+	$(MK_MAIN) detail
+
+docker-check:
+	$(MK_BGND) docker-check && $(MK_MAIN) docker-check
+
+docker-install:
+	$(MK_BGND) docker-install && $(MK_MAIN) docker-install
+
+docker-restart:
+	$(MK_BGND) docker-restart && $(MK_MAIN) docker-restart
+
+docker-start:
+	$(MK_BGND) docker-start && $(MK_MAIN) docker-start
+
+docker-stop:
+	$(MK_BGND) docker-stop && $(MK_MAIN) docker-stop
+
+docker-bglogs:
+	$(MK_BGND) docker-logs
+
+docker-logs:
+	$(MK_MAIN) docker-logs
+
+docker-uninstall:
+	$(MK_BGND) docker-uninstall && $(MK_MAIN) docker-uninstall
+
+docker-bgstatus:
+	$(MK_BGND) docker-status
+
+docker-status:
+	&& $(MK_MAIN) docker-status

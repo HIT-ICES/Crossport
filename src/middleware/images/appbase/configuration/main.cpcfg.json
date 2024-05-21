@@ -1,0 +1,37 @@
+{
+    "video": [
+        {
+            "key": "mainCamera",
+            "codec": {
+                "m_MimeType": "video/H264",
+                "m_SdpFmtpLine": "implementation_name=NvCodec;level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e033"
+            },
+            "minBitrate": 0,
+            "maxBitrate": 10000,
+            "frameRate": 30.0,
+            "resolutionX": 2560,
+            "resolutionY": 1440
+        }
+    ],
+    "audio": [
+        {
+            "key": "gameAudio",
+            "codec": {
+                "m_MimeType": "audio/opus",
+                "m_SdpFmtpLine": "minptime=10;sprop-stereo=1;stereo=1;useinbandfec=1",
+                "m_ChannelCount": 2,
+                "m_SampleRate": 48000
+            },
+            "minBitrate": 0,
+            "maxBitrate": 2000
+        }
+    ],
+    "signaling": {
+        "application": "${APP_NAME}",
+        "capacity": 1,
+        "component": "main",
+        "address": "${SIG_SRV}",
+        "port": ${SIG_PORT},
+        "interval": 5.0
+    }
+}

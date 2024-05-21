@@ -1,0 +1,1 @@
+xvfb-run -a vglrun /opt/VirtualGL/bin/glxspheres64 2>&1

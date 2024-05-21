@@ -1,0 +1,7 @@
+# THIS IS NOT Dockerfile for base image, but for app images.
+
+FROM 192.168.1.104:5000/metaverse/[[APPLICATION_NAME]]/base-image:v0.1
+
+COPY /app /app/main_Data
+COPY *.cpcfg.json /app/
+

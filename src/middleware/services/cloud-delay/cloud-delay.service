@@ -1,0 +1,12 @@
+[Unit]
+Description=Cloud Delay Simulation Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /opt/cloud-delay/start.sh
+ExecStop=/bin/bash /opt/cloud-delay/stop.sh
+User=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

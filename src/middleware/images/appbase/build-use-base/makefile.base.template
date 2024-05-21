@@ -1,0 +1,32 @@
+# Crossport App Conf.
+APP_NAME = [[APPLICATION_NAME]]
+CMP_NAME = base-image
+VERSION = 0.1
+
+# Project Conf.
+PROJECT = metaverse
+PROJECT_ROOT ?= ../../../..
+DOCKERFILE_DIR = $(PROJECT_ROOT)/images/apps/common
+WORK_DIR = .
+IMAGE_REPO = 192.168.1.104:5000/$(PROJECT)
+
+# Image Conf.
+IMAGE_NAME ?= $(APP_NAME)/$(CMP_NAME)
+IMAGE_TAG ?= v$(VERSION)
+IMAGE_FULL_NAME = $(IMAGE_REPO)/$(IMAGE_NAME):$(IMAGE_TAG)
+
+# Docker Conf.
+DOCKER = docker
+
+# Targets
+
+.PHONY: default tag publish
+
+default:
+	$(DOCKER) build -f $(DOCKERFILE_DIR)/Dockerfile -t $(IMAGE_NAME):$(IMAGE_TAG) $(WORK_DIR)
+
+tag: default
+	$(DOCKER) tag $(IMAGE_NAME):$(IMAGE_TAG) $(IMAGE_FULL_NAME)
+
+publish: tag
+	$(DOCKER) push $(IMAGE_FULL_NAME)
