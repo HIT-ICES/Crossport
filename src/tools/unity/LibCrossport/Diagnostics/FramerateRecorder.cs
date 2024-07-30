@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.RenderStreaming;
 using Unity.WebRTC;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace Anonymous.Crossport.Diagnostics
     public class FrameRateRecorder : MonoBehaviour
     {
         [SerializeField] private VideoStreamReceiver? activeReceiver;
-
+        [SerializeField] private bool useLogging=false;
         public static double averageFps;
 
         public static List<double> rawFps = new();
@@ -59,8 +60,20 @@ namespace Anonymous.Crossport.Diagnostics
         void AddFps(double fps)
         {
             if (rawFps.Count <= 200) rawFps.Add(fps);
+            if (useLogging && rawFps.Count % 10 == 0) AsyncLog($"FPS: {fps:0.00}");
         }
 
+        void AsyncLog(string message)
+        {
+            StartCoroutine(Log());
+            return;
+
+            IEnumerator Log()
+            {
+                ConsoleManager.LogWithDebug(message);
+                yield return null;
+            }
+        }
         private void Update()
         {
             if (activeReceiver != null) return;
