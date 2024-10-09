@@ -1,5 +1,7 @@
 # Crossport
 
+> A out-of-box deployment-ready artifacts can be found [here](https://drive.google.com/file/d/1-2g9LcesghyS9UJQ-zDNjOUj6L_3Rc3T/view?usp=sharing).
+
 This repository contains most of the resources for reproducing Crossport, but some of the content is proprietary (by PICO or Unity) or too large and therefore cannot be attached here.
 
 File Structure：
