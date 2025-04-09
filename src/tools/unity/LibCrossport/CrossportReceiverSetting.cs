@@ -1,12 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Anonymous.Crossport.Settings;
+using Ices.Crossport.Settings;
 using Unity.RenderStreaming;
 using UnityEngine;
 
 //using UnityEditor.VersionControl;
-namespace Anonymous.Crossport
+namespace Ices.Crossport
 {
 
     [Serializable]

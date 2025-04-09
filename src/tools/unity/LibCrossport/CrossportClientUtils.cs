@@ -3,14 +3,14 @@ using System;
 using System.Collections;
 using System.Threading;
 using Assets.Scripts.LibCrossport.Settings;
-using Anonymous.Crossport.Diagnostics;
-using Anonymous.Crossport.Settings;
+using Ices.Crossport.Diagnostics;
+using Ices.Crossport.Settings;
 using Newtonsoft.Json;
 using Unity.RenderStreaming;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Anonymous.Crossport
+namespace Ices.Crossport
 {
     public class CrossportClientUtils
     {
@@ -97,9 +97,10 @@ namespace Anonymous.Crossport
             }
 
             var expUri = clientSetting.GetStatsSubmissionUrl();
-            var stats = new ClientExpStats()
+            var stats = new ClientExpStats
                         {
-                            frameRate = FrameRateRecorder.Export(),
+                            localFrameRate = FrameRateRecorder.ExportLocal(),
+                            remoteFrameRate = FrameRateRecorder.ExportRemote(),
                             netLatency = EventLogger.Export(),
                             mtpLatency = MTPRecorder.Export()
                         };
@@ -118,7 +119,7 @@ namespace Anonymous.Crossport
             }
         }
 
-        public static IEnumerator FetchAndApplyConfig(CrossportClientSetting clientSetting)
+        public static IEnumerator FetchAndApplyConfig(CrossportClientSetting clientSetting, bool forceExp = false)
         {
             var appUri = clientSetting.GetConfigUrl();
             var www = UnityWebRequest.Get(appUri);
@@ -142,7 +143,7 @@ namespace Anonymous.Crossport
                     $"Profile: {ClientProfile}; {appConfig.resolutionX}x{appConfig.resolutionY}@{appConfig.frameRate}; QL: {appConfig.qualityLevel}"
                 );
                 ClientProfile = appConfig.profile;
-
+                if (forceExp) EnableExp();
                 QualityManager.SetResolution(appConfig.resolutionX, appConfig.resolutionY);
                 QualityManager.SetTargetFrameRate(appConfig.frameRate);
                 QualityManager.SetQualityLevel(appConfig.qualityLevel);
@@ -154,7 +155,7 @@ namespace Anonymous.Crossport
                 );
                 ConsoleManager.LogWithDebug
                 (
-                    $"Profile: {ClientProfile}; {Screen.width}x{Screen.height}@{Application.targetFrameRate}; QL: {QualitySettings.GetQualityLevel()}"
+                    $"Profile: {ClientProfile}{(forceExp ? "(force)" : "")}; {Screen.width}x{Screen.height}@{Application.targetFrameRate}; QL: {QualitySettings.GetQualityLevel()}"
                 );
                 if (IsExp)
                 {

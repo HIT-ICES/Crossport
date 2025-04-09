@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Anonymous.Crossport.Settings;
+using Ices.Crossport.Settings;
 using UnityEngine;
 
 namespace Assets.Scripts.LibCrossport.Settings

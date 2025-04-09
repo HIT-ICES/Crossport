@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Anonymous.Crossport.Settings;
+using Ices.Crossport.Settings;
 using Newtonsoft.Json;
 
-namespace Anonymous.Crossport.Diagnostics
+namespace Ices.Crossport.Diagnostics
 {
     [Serializable]
-    public class Stats
+    public class Latency
     {
         [JsonProperty] public double min;
         [JsonProperty] public double max;
         [JsonProperty] public double average;
         [JsonProperty] public List<double> raw;
 
-        public static Stats FromRaw(List<double> raw)
+        public static Latency FromRaw(List<double> raw)
         {
             if (raw.Count == 0) return new();
             return new()
@@ -26,7 +26,7 @@ namespace Anonymous.Crossport.Diagnostics
                    };
         }
 
-        public static Stats FromRawAndAvg(List<double> raw, double average)
+        public static Latency FromRawAndAvg(List<double> raw, double average)
         {
             if (raw.Count == 0) return new();
             return new()
@@ -40,10 +40,34 @@ namespace Anonymous.Crossport.Diagnostics
     }
 
     [Serializable]
+    public class FrameRate
+    {
+        [JsonProperty] public double min;
+        [JsonProperty] public double max;
+        [JsonProperty] public List<double> raw;
+        [JsonProperty] public uint frameCount;
+        [JsonProperty] public long timeDiff;
+
+        public static FrameRate FromRaw(List<double> raw, uint frameCount, long timeDiff)
+        {
+            if (raw.Count == 0) return new();
+            return new()
+                   {
+                       min = raw.Min(),
+                       max = raw.Max(),
+                       raw = raw,
+                       frameCount = frameCount,
+                       timeDiff = timeDiff
+                   };
+        }
+    }
+
+    [Serializable]
     public class ClientExpStats
     {
-        [JsonProperty] public Stats netLatency;
-        [JsonProperty] public Stats mtpLatency;
-        [JsonProperty] public Stats frameRate;
+        [JsonProperty] public Latency netLatency;
+        [JsonProperty] public Latency mtpLatency;
+        [JsonProperty] public FrameRate localFrameRate;
+        [JsonProperty] public FrameRate remoteFrameRate;
     }
 }

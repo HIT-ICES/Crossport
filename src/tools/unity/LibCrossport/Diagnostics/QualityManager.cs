@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Anonymous.Crossport.Diagnostics
+namespace Ices.Crossport.Diagnostics
 {
     public class QualityManager
     {

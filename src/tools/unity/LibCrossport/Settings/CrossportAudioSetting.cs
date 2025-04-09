@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Anonymous.Crossport.Settings
+namespace Ices.Crossport.Settings
 {
     [Serializable]
     public class CrossportAudioSetting

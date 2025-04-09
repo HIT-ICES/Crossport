@@ -2,11 +2,11 @@
 using System.Linq;
 using Assets.Scripts.LibCrossport.Settings;
 #nullable enable
-using Anonymous.Crossport.Settings;
+using Ices.Crossport.Settings;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Anonymous.Crossport.ObjectModel
+namespace Ices.Crossport.ObjectModel
 {
     public class CrossportDriverBase : MonoBehaviour
     {
@@ -45,6 +45,7 @@ namespace Anonymous.Crossport.ObjectModel
                     : CrossportConfigurationManager.GetPlaceHoldenSetting(configName);
             CrossportVideoSetting.LogAvailableCodecs();
             setting ??= defaultConfig;
+            Debug.Log($"!!!!! setting: {setting}");
             if (autoRun) RideOn();
         }
     }

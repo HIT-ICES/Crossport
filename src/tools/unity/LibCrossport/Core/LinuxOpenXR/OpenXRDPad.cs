@@ -12,7 +12,7 @@ using UnityEngine.Scripting;
 using PoseControl = UnityEngine.InputSystem.XR.PoseControl;
 #endif
 
-namespace Anonymous.Crossport.Core.LinuxOpenXR
+namespace Ices.Crossport.Core.LinuxOpenXR
 {
     /// <summary>
     ///     A  dpad-like interaction feature that allows the application to bind one or more digital actions to a trackpad or

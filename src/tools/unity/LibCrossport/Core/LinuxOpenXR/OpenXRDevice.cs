@@ -7,7 +7,7 @@ using UnityEngine.XR;
 using CommonUsages = UnityEngine.InputSystem.CommonUsages;
 using InputDevice = UnityEngine.InputSystem.InputDevice;
 
-namespace Anonymous.Crossport.Core.LinuxOpenXR
+namespace Ices.Crossport.Core.LinuxOpenXR
 {
     /// <summary>
     ///     OpenXR Input System device

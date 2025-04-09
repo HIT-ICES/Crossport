@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Authentication;
 using System.Text;
 using System.Threading;
-using Anonymous.Crossport.Settings;
+using Ices.Crossport.Settings;
 using Unity.RenderStreaming;
 using Unity.RenderStreaming.Signaling;
 using Unity.WebRTC;
@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using WebSocketSharp;
 
-namespace Anonymous.Crossport
+namespace Ices.Crossport
 {
     [Serializable]
     public class RoutedMessage<T>
@@ -218,11 +218,13 @@ namespace Anonymous.Crossport
         private void WSProcessMessage(object sender, MessageEventArgs e)
         {
             var content = Encoding.UTF8.GetString(e.RawData);
-            ConsoleManager.LogWithDebug($"Signaling: Receiving message: {content}");
+            // ConsoleManager.LogWithDebug($"Signaling: Receiving message: {content}");
 
             try
             {
                 var routedMessage = JsonUtility.FromJson<RoutedMessage<SignalingMessage>>(content);
+                
+                ConsoleManager.LogWithDebug($"Signaling: Receiving [{routedMessage.type}] message: {content}");
 
                 SignalingMessage msg;
                 msg = !string.IsNullOrEmpty(routedMessage.type)

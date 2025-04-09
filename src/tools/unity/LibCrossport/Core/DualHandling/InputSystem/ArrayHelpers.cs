@@ -9,7 +9,7 @@ using System.Linq;
 using UnityEngine;
 
 // namespace Unity.WebRTC.InputSystem
-namespace Anonymous.Crossport.Core.DualHandling.InputSystem
+namespace Ices.Crossport.Core.DualHandling.InputSystem
 {
     internal static class ArrayHelpers
     {

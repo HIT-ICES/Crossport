@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using Anonymous.Crossport.Diagnostics;
+using Ices.Crossport.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
-namespace Anonymous.Crossport.Diagnostics
+namespace Ices.Crossport.Diagnostics
 {
     public class MTPRecorder : MonoBehaviour
     {
@@ -29,8 +29,8 @@ namespace Anonymous.Crossport.Diagnostics
         bool isFlashing = false;
         public static void ResetStats() { _mtps.Clear(); }
 
-        public static Stats Export()
-            => Stats.FromRaw(_mtps);
+        public static Latency Export()
+            => Latency.FromRaw(_mtps);
 
         private void Awake() { _instance = this; }
 

@@ -12,7 +12,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 #endif
 
-namespace Anonymous.Crossport.Receiver
+namespace Ices.Crossport.Receiver
 {
     internal enum SignalingType { WebSocket, Http, Furioos }
 

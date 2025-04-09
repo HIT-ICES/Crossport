@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Anonymous.Crossport.Settings
+namespace Ices.Crossport.Settings
 {
     [Serializable]
     public class CrossportClientSetting : CrossportClientInfo
@@ -36,6 +36,7 @@ namespace Anonymous.Crossport.Settings
 
         public Uri GetHttpUrl(string path)
         {
+            Debug.Log($"!!!!!!!! address: {address}, port: {port}, path: {path}");
             var builder = new UriBuilder
                           {
                               Scheme = UseSsl ? "https" : "http",

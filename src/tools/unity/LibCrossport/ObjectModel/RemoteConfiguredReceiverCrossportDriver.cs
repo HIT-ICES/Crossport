@@ -10,12 +10,12 @@
 using System;
 using System.Threading;
 using Assets.Scripts.LibCrossport.Settings;
-using Anonymous.Crossport;
-using Anonymous.Crossport.ObjectModel;
+using Ices.Crossport;
+using Ices.Crossport.ObjectModel;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Anonymous.Crossport.ObjectModel
+namespace Ices.Crossport.ObjectModel
 {
     public class RemoteConfiguredReceiverCrossportDriver : CrossportDriverBase
     {

@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Anonymous.Crossport;
-using Anonymous.Crossport.Diagnostics;
-using Anonymous.Crossport.Settings;
+using Ices.Crossport;
+using Ices.Crossport.Diagnostics;
+using Ices.Crossport.Settings;
 using Unity.RenderStreaming;
 using Unity.RenderStreaming.Signaling;
 using UnityEngine;
@@ -13,7 +13,7 @@ using UnityEngine.InputSystem.Controls;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-namespace Anonymous.Crossport.Receiver
+namespace Ices.Crossport.Receiver
 {
     public partial class ControlPanel : MonoBehaviour
     {
@@ -52,7 +52,8 @@ namespace Anonymous.Crossport.Receiver
 
         protected IEnumerator StartAsync()
         {
-            yield return CrossportClientUtils.FetchAndApplyConfig(crossportSetting);
+            yield return CrossportClientUtils.FetchAndApplyConfig(crossportSetting, true);
+
             stopButton.gameObject.SetActive(true);
             startButton.gameObject.SetActive(false);
         }

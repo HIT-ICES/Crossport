@@ -1,23 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net;
 using Unity.RenderStreaming;
 using Unity.WebRTC;
 using UnityEngine;
 
-namespace Anonymous.Crossport.Diagnostics
+namespace Ices.Crossport.Diagnostics
 {
     public class FrameRateRecorder : MonoBehaviour
     {
+        const int RAW_DATA_SIZE_LIMIT = 600;
         [SerializeField] private VideoStreamReceiver? activeReceiver;
-        [SerializeField] private bool useLogging=false;
-        public static double averageFps;
 
-        public static List<double> rawFps = new();
+        public static List<double> localRawFps = new();
+        public static List<double> remoteRawFps = new();
         private static FrameRateRecorder _instance;
-        private uint frameCount;
-        private double durations;
+        private uint localframeCount;
+        private double localDurations;
+
+        private int lastRecordDuration;
+
         private uint remoteInitFrameCount;
         private long remoteInitTimestamp;
         private uint remoteLastFrameCount;
@@ -25,21 +28,37 @@ namespace Anonymous.Crossport.Diagnostics
 
         public static void ResetStats()
         {
-            averageFps = 0;
-            rawFps.Clear();
+            localRawFps.Clear();
+            remoteRawFps.Clear();
             _instance?.InstanceResetStats();
         }
 
         public void InstanceResetStats()
         {
-            frameCount = 0;
-            durations = 0;
+            lastRecordDuration = -1;
+            localframeCount = 0;
+            localDurations = 0;
             remoteInitTimestamp = 0;
             remoteInitFrameCount = 0;
+            remoteLastTimestamp = 0;
+            remoteLastFrameCount = 0;
         }
 
-        public static Stats Export()
-            => Stats.FromRawAndAvg(rawFps, averageFps);
+        public static FrameRate ExportLocal()
+            => FrameRate.FromRaw
+            (
+                localRawFps,
+                _instance.localframeCount,
+                (long)(_instance.localDurations * 1000000L)
+            );
+
+        public static FrameRate ExportRemote()
+            => FrameRate.FromRaw
+            (
+                remoteRawFps,
+                _instance.remoteLastFrameCount - _instance.remoteInitFrameCount,
+                _instance.remoteLastTimestamp - _instance.remoteInitTimestamp
+            );
 
         private void Awake() { _instance = this; }
 
@@ -49,41 +68,33 @@ namespace Anonymous.Crossport.Diagnostics
             if (activeReceiver != null)
             {
                 StartCoroutine(CollectStats());
-                ConsoleManager.LogWithDebug("Using Receiver Framerate");
+                ConsoleManager.LogWithDebug("Collecting Receiver Framerate");
             }
-            else
-            {
-                ConsoleManager.LogWithDebug("Using Local Framerate");
-            }
+
+            ConsoleManager.LogWithDebug("Collecting Local Framerate");
         }
 
-        void AddFps(double fps)
+        void AddLocalFps(double fps)
         {
-            if (rawFps.Count <= 200) rawFps.Add(fps);
-            if (useLogging && rawFps.Count % 10 == 0) AsyncLog($"FPS: {fps:0.00}");
+            // var currentTime = (int)Math.Floor(localDurations);
+            // if (currentTime == lastRecordDuration) return; // Wait for Next Second
+            // lastRecordDuration = currentTime;
+            if (localRawFps.Count <= RAW_DATA_SIZE_LIMIT) localRawFps.Add(fps);
         }
 
-        void AsyncLog(string message)
+        void AddRemoteFps(double fps)
         {
-            StartCoroutine(Log());
-            return;
-
-            IEnumerator Log()
-            {
-                ConsoleManager.LogWithDebug(message);
-                yield return null;
-            }
+            if (remoteRawFps.Count <= RAW_DATA_SIZE_LIMIT) remoteRawFps.Add(fps);
         }
+
         private void Update()
         {
-            if (activeReceiver != null) return;
             // Local Framerate
             var dt = Time.unscaledDeltaTime;
-            durations += dt;
-            frameCount++;
-            averageFps = frameCount / durations;
+            localDurations += dt;
+            localframeCount++;
             var fps = 1.0 / dt;
-            AddFps(fps);
+            AddLocalFps(fps);
         }
 
         private void OnDestroy() { }
@@ -123,11 +134,9 @@ namespace Anonymous.Crossport.Diagnostics
                 }
                 else
                 {
-                    var totalTimeDiff = (double)(inboundStats.Timestamp - remoteInitTimestamp) / 1000000L;
-                    averageFps = (inboundStats.framesDecoded - remoteInitFrameCount) / totalTimeDiff;
                     var currentTimeDiff = (double)(inboundStats.Timestamp - remoteLastTimestamp) / 1000000L;
                     var fps = (inboundStats.framesDecoded - remoteLastFrameCount) / currentTimeDiff;
-                    AddFps(fps);
+                    AddRemoteFps(fps);
                 }
 
                 remoteLastFrameCount = inboundStats.framesDecoded;

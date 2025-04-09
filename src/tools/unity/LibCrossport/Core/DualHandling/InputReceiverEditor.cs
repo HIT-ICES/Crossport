@@ -1,5 +1,5 @@
 #if UNITY_EDITOR
-using Anonymous.Crossport.Core.DualHandling.InputSystem;
+using Ices.Crossport.Core.DualHandling.InputSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using UnityEngine.InputSystem.Utilities;
 
-namespace Anonymous.Crossport.Core.DualHandling
+namespace Ices.Crossport.Core.DualHandling
 {
     [CustomEditor(typeof(DualHandlingInputReceiver))]
     internal class InputReceiverEditor : UnityEditor.Editor

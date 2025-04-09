@@ -2,7 +2,7 @@ using Assets.Scripts.LibCrossport.Settings;
 using Unity.RenderStreaming;
 using UnityEngine;
 
-namespace Anonymous.Crossport.ObjectModel
+namespace Ices.Crossport.ObjectModel
 {
     public class PlainCrossportDriver : CrossportDriverBase
     {

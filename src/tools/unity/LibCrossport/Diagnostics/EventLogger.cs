@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Anonymous.Crossport.Diagnostics
+namespace Ices.Crossport.Diagnostics
 {
     public class EventLogger
     {
@@ -20,10 +20,10 @@ namespace Anonymous.Crossport.Diagnostics
             PostedEventDict.TryAdd(binary, now);
         }
 
-        public static Stats Export()
+        public static Latency Export()
         {
             if (_delays.Count == 0) return new();
-            return Stats.FromRaw(_delays.Select(t => t.TotalMilliseconds).ToList());
+            return Latency.FromRaw(_delays.Select(t => t.TotalMilliseconds).ToList());
         }
 
         public static void Reset() { _delays.Clear(); }

@@ -1,7 +1,7 @@
 // note:: This script is using code snippets in InputSystem.
 // https://github.com/Unity-Technologies/InputSystem/blob/develop/Packages/com.unity.inputsystem/InputSystem/Devices/Remote/InputRemoting.cs
 
-using Anonymous.Crossport.Diagnostics;
+using Ices.Crossport.Diagnostics;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -31,7 +31,7 @@ using WebSocketSharp;
 ////REVIEW: the namespacing mechanism for layouts which changes base layouts means that layouts can't be played
 ////        around with on the editor side but will only be changed once they're updated in the player
 
-namespace Anonymous.Crossport.Core.DualHandling.InputSystem
+namespace Ices.Crossport.Core.DualHandling.InputSystem
 {
     /// <summary>
     /// Makes the activity and data of an InputManager observable in message form.

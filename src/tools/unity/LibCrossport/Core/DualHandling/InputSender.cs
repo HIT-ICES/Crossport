@@ -1,13 +1,13 @@
-using Anonymous.Crossport.Core.DualHandling.InputSystem;
+using Ices.Crossport.Core.DualHandling.InputSystem;
 using System;
-using Anonymous.Crossport.Diagnostics;
+using Ices.Crossport.Diagnostics;
 using Unity.RenderStreaming;
 using Unity.RenderStreaming.InputSystem;
 using Unity.WebRTC;
 using UnityEngine;
-using InputRemoting = Anonymous.Crossport.Core.DualHandling.InputSystem.InputRemoting;
+using InputRemoting = Ices.Crossport.Core.DualHandling.InputSystem.InputRemoting;
 
-namespace Anonymous.Crossport.Core.DualHandling
+namespace Ices.Crossport.Core.DualHandling
 {
     /// <summary>
     /// 

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem.Layouts;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.Scripting;
 
-namespace Anonymous.Crossport.Core.LinuxOpenXR
+namespace Ices.Crossport.Core.LinuxOpenXR
 {
     [Preserve]
     [InputControlLayout(displayName = "OpenXR HMD")]

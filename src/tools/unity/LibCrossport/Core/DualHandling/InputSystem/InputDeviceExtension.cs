@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
 
-namespace Anonymous.Crossport.Core.DualHandling.InputSystem
+namespace Ices.Crossport.Core.DualHandling.InputSystem
 {
     // todo(kazuki)::Avoid to use reflection
     static class InputDeviceExtension
