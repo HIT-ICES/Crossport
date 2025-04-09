@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Anonymous.Crossport.Controllers;
+namespace Ices.Crossport.Controllers;
 
 [Route("ice")]
 public class IceController(IConfiguration config) : Controller

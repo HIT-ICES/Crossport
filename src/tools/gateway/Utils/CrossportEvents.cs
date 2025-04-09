@@ -1,4 +1,4 @@
-﻿namespace Anonymous.Crossport.Utils;
+﻿namespace Ices.Crossport.Utils;
 
 public static class CrossportEvents
 {

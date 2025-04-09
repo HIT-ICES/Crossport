@@ -1,7 +1,7 @@
-﻿using Anonymous.Crossport.Core;
+﻿using Ices.Crossport.Core;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Anonymous.Crossport.Controllers;
+namespace Ices.Crossport.Controllers;
 
 [Route("app")]
 public class AppController(

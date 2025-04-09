@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entitlementCheckSimulation: 0
   startTimeEntitlementCheck: 0
-  appID: com.Anonymous.fers.VRClassroom
+  appID: com.Ices.fers.VRClassroom
   useHighlight: 1
   deviceSN: []

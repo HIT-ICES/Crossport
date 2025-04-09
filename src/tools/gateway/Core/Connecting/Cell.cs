@@ -1,4 +1,4 @@
-﻿namespace Anonymous.Crossport.Core.Connecting;
+﻿namespace Ices.Crossport.Core.Connecting;
 
 public delegate void CellEventHandler(Cell sender);
 

@@ -1,7 +1,7 @@
-﻿using Anonymous.Crossport.Core.Entities;
+﻿using Ices.Crossport.Core.Entities;
 using System.Text.Json.Serialization;
 
-namespace Anonymous.Crossport.Core.Diagnostics;
+namespace Ices.Crossport.Core.Diagnostics;
 
 [Serializable]
 public record ExperimentConfig(

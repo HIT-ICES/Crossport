@@ -1,8 +1,8 @@
-﻿using Anonymous.Crossport.Core;
-using Anonymous.MetaCdn.Remoting;
+﻿using Ices.Crossport.Core;
+using Ices.MetaCdn.Remoting;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Anonymous.Crossport.Controllers;
+namespace Ices.Crossport.Controllers;
 
 [Route("/health")]
 public class HealthController(

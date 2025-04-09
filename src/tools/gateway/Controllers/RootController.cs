@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Anonymous.Crossport.Controllers;
+namespace Ices.Crossport.Controllers;
 
 [ApiController, Route("/")]
 public class RootController : ControllerBase

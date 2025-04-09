@@ -1,4 +1,4 @@
-﻿namespace Anonymous.Crossport.Core.Signalling;
+﻿namespace Ices.Crossport.Core.Signalling;
 
 public delegate Task SignalingMessageHandler(ISignalingHandler sender, Dictionary<string, object> message);
 

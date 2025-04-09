@@ -1,4 +1,4 @@
-﻿namespace Anonymous.Crossport.Core.Entities;
+﻿namespace Ices.Crossport.Core.Entities;
 
 [Serializable]
 public record CrossportConfig

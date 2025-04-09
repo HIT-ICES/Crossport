@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
-using Anonymous.Crossport.Core.Entities;
-using Anonymous.Crossport.Core.Signalling;
-using Anonymous.Crossport.Utils;
+using Ices.Crossport.Core.Entities;
+using Ices.Crossport.Core.Signalling;
+using Ices.Crossport.Utils;
 
-namespace Anonymous.Crossport.Core.Connecting;
+namespace Ices.Crossport.Core.Connecting;
 
 public delegate Task ConnectEvent(Peer sender, string connectionId);
 
