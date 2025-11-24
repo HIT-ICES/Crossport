@@ -4,6 +4,26 @@
 
 This repository contains most of the resources for reproducing Crossport, but some of the content is proprietary (by PICO or Unity) or too large and therefore cannot be attached here.
 
+## Citation
+
+If you use this work in your research, please cite:
+
+```bibtex
+@ARTICLE{su2025crossport,
+  author={Su, Zihang and He, Xiang and Wang, Wenrui and Wang, Zhongjie},
+  journal={IEEE Transactions on Services Computing},
+  title={Crossport: a Cloud-Edge-End Microservice Architecture for Collaborative Rendering in Metaverse Services},
+  year={2025},
+  volume={},
+  number={},
+  pages={1-13},
+  keywords={Metaverse;Rendering (computer graphics);Microservice architectures;Collaboration;Cloud computing;Computer architecture;Resource management;Real-time systems;Costs;Servers;Metaverse Services;Microservices;Cloud-Edge End Collaboration;Collaborative Rendering},
+  doi={10.1109/TSC.2025.3633668}
+}
+```
+
+**Paper**: Z. Su, X. He, W. Wang and Z. Wang, "Crossport: a Cloud-Edge-End Microservice Architecture for Collaborative Rendering in Metaverse Services," in *IEEE Transactions on Services Computing*, doi: [10.1109/TSC.2025.3633668](https://doi.org/10.1109/TSC.2025.3633668).
+
 File Structure：
 
 - apps: Applications used for experiment
